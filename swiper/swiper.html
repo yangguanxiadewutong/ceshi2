@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<style type="text/css">
+			html, body {
+		        position: relative;
+		        height: 100%;
+		    }
+		    img{display: block;border:0;}
+		    body {
+		        background: #eee;
+		        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+		        font-size: 14px;
+		        color:#000;
+		        margin: 0;
+		        padding: 0;
+		    }
+		    .swiper-container {
+		        width: 100%;
+		        height: 100%;
+		        position: relative;
+		    }
+		    .swiper-slide {
+		        text-align: center;
+		        font-size: 18px;
+		        background: #fff;
+		
+		        /* Center slide text vertically */
+		        display: -webkit-box;
+		        display: -ms-flexbox;
+		        display: -webkit-flex;
+		        display: flex;
+		        -webkit-box-pack: center;
+		        -ms-flex-pack: center;
+		        -webkit-justify-content: center;
+		        justify-content: center;
+		        -webkit-box-align: center;
+		        -ms-flex-align: center;
+		        -webkit-align-items: center;
+		        align-items: center;
+		    }
+		    .first{background: rgba(25,43,57,1);}
+		    .second{background: rgba(25,43,57,1);}
+		    .third{background: rgba(25,43,57,1);}
+		    .jiantou{
+		    	position: absolute;
+		    	bottom: 10px;
+		    	left:50%;
+		    	opacity: 0.6;
+		    	margin-left:-18.5px;
+		    	animation: jiantou 1s ease-in-out 0.5s alternate infinite;
+		    }
+		    @keyframes jiantou{
+		    	0%{transform: translate(0,0);opacity: 0.6;}
+		    	50%{transform: translate(0,-10px);opacity: 0.8;}
+		    	100%{transform: translate(0,-10px);opacity: 1;}
+		    }
+		    .first-box{
+		    	width:344px;height: 344px;position: relative;
+		    	transform-style: preserve-3d;
+		    	animation: zhuan0 5s ease 0s alternate infinite forwards;
+		    }
+		    @keyframes zhuan0{
+		    	0%{transform: rotateX(0deg) rotateY(0deg);}
+		    	100%{transform: rotateX(360deg) rotateY(360deg);}
+		    }
+		    .first-kuan0,.first-kuan1-box,.first-kuan2,.first-kuan3{position: absolute;left: 50%;top:50%;}
+		    .first-kuan1-box,.first-kuan2,.first-kuan3{margin-left:-86px;margin-top:-86px;}
+		    .first-kuan0{margin-top:-38px;margin-left:-38px;}
+		    .first-kuan1-box{
+		    	width:172px;height: 172px;
+		    	animation: zhuan1 2s linear 2s alternate infinite;
+		    }
+		    @keyframes zhuan1{
+		    	0%{transform: rotate3d(1,1,0,0deg);}
+		    	25%{transform: rotate3d(1,1,0,90deg);}
+		    	50%{transform: rotate3d(1,1,0,180deg);}
+		    	75%{transform: rotate3d(1,1,0,270deg);}
+		    	100%{transform: rotate3d(1,1,0,360deg);}
+		    }
+		    .first-kuan1{
+		    	transform: rotate(90deg);
+		    }
+		    .first-kuan2{
+		    	transform: scale(1.5);
+		    	animation: zhuan2 2s ease 2s alternate infinite;
+		    }
+		    @keyframes zhuan2{
+		    	0%{transform: scale(1.5) rotate3d(1,1,0,-0deg);}
+		    	25%{transform: scale(1.5) rotate3d(1,1,0,-90deg);}
+		    	50%{transform: scale(1.5) rotate3d(1,1,0,-180deg);}
+		    	75%{transform: scale(1.5) rotate3d(1,1,0,-270deg);}
+		    	100%{transform: scale(1.5) rotate3d(1,1,0,-360deg);}
+		    }
+		    .first-kuan3{
+		    	transform: scale(2);
+		    	animation: zhuan3 2s linear 2s infinite;
+		    }
+		    @keyframes zhuan3{
+		    	0%{transform: scale(2) rotate(0deg);}
+		    	25%{transform: scale(2) rotate(90deg);}
+		    	50%{transform: scale(2) rotate(180deg);}
+		    	75%{transform: scale(2) rotate(270deg);}
+		    	100%{transform: scale(2) rotate(360deg);}
+		    }
+		    
+		    .second-box{
+		    	width:430px;height: 430px;position: relative;
+		    	transform-style: preserve-3d;
+		    }
+		    .zhixing.second-box{
+		    	animation: xuanbox 4s linear 10s forwards;
+		    }
+		    @keyframes xuanbox{
+		    	0%{transform: rotateX(0deg) rotateY(0deg);}
+		    	100%{transform: rotateX(60deg) rotateY(-30deg);}
+		    }
+		    .second .tingzhi{
+		    	transform: rotateX(0deg) rotateY(0deg);
+		    	transition: all 3s ease;
+		    }
+		    
+		    .xuan0,.xuan1,.xuan2,.xuan3,.xuan4,.xuan5{position: absolute;top:50%;left:50%;}
+		    .xuan0{
+		    	margin-left: -140px;margin-top: -140px;
+		    	transform: translateZ(100px);
+		    }
+		    .xuan1{
+		    	margin-left: -140px;margin-top: -140px;
+		    	transform: translateZ(100px);
+		    }
+		    .xuan2{
+		    	margin-left: -133px;margin-top: -133px;
+		    	transform: translateZ(20px);
+		    }
+		    .xuan3{
+		    	margin-left: -86px;margin-top: -86px;
+		    	transform: scale(2.5);
+		    }
+		    .xuan4{
+		    	margin-left: -86px;margin-top: -86px;
+		    	transform: translateZ(-80px);
+		    }
+		    .xuan5{margin-left: -51px;margin-top: -51px;}
+		    
+		    
+		    .zhixing .xuan0{
+		    	animation: xuan0 1s linear 10s infinite;
+		    }
+		    @keyframes xuan0{
+		    	0%{transform: translateZ(100px) rotate(0deg);}
+		    	100%{transform: translateZ(100px) rotate(360deg);}
+		    }
+		    .zhixing .xuan1{
+		    	animation: xuan0 5s ease 11s alternate infinite;
+		    }
+		    .zhixing .xuan2{
+		    	animation: xuan2 3s ease-in 12s infinite;
+		    }
+		    @keyframes xuan2{
+		    	0%{transform: translateZ(20px) rotate(0deg);}
+		    	100%{transform: translateZ(20px) rotate(360deg);}
+		    }
+		    .zhixing .xuan3{
+		    	animation: xuan3x 4s linear 12s alternate 2,xuan3 2s ease 20s alternate-reverse infinite;
+		    }
+		    @keyframes xuan3x{
+		    	0%{transform: rotate3d(0,0,1,0deg) scale(2.5);}
+		    	100%{transform: rotate3d(0,0,1,360deg) scale(2.5);}
+		    }
+		    @keyframes xuan3{
+		    	0%{transform: rotate3d(1,1,1,0deg) scale(2.5);}
+		    	100%{transform: rotate3d(1,1,1,360deg) scale(2.5);}
+		    }
+		    .zhixing .xuan4{
+		    	animation: xuan4 3s linear 13s infinite;
+		    }
+		    @keyframes xuan4{
+		    	0%{transform: translateZ(-80px) rotate(0deg);}
+		    	100%{transform: translateZ(-80px) rotate(360deg);}
+		    }
+		    .zhixing .xuan5{
+		    	animation: xuan5 2s ease-in-out 14s alternate-reverse infinite;
+		    }
+		    @keyframes xuan5{
+		    	0%{transform: scale3d(1,1,1) rotate(0deg);}
+		    	25%{transform: scale3d(2,2,1) rotate(90deg);}
+		    	50%{transform: scale3d(2,2,2) rotate(180deg);}
+		    	75%{transform: scale3d(2,2,1) rotate(270deg);}
+		    	100%{transform: scale3d(1,1,1) rotate(360deg);}
+		    }
+		    
+		    .third-box{
+		    	width:570px;height: 244px;position: relative;
+		    }
+		    .third-box img{
+		    	position: absolute;opacity: 0;
+		    }
+		    .third-box .spacial{
+		    	opacity: 1;
+		    }
+		    .spac.jixie0{
+		    	animation: xian 0.2s linear 0s forwards ;
+		    }
+		    @keyframes xian{
+		    	0%{opacity: 0;}
+		    	2%{opacity: 1;}
+		    	99%{opacity: 1;}
+		    	100%{opacity: 0;}
+		    }
+		    .spac.jixie1{
+		    	animation: xian 0.2s linear 0s forwards ;
+		    }
+		    .spac.jixie2{
+		    	animation: xian 0.2s linear 0s forwards ;
+		    }
+		    .spac.jixie3{
+		    	animation: xian 0.2s linear 0s forwards ;
+		    }
+		    .spac.jixie4{
+		    	animation: xian 0.2s linear 0s forwards ;
+		    }
+		    .spac.jixie5{
+		    	animation: xian 0.2s linear 0s forwards ;
+		    }
+		    .spac.jixie6{
+		    	animation: xian 0.2s linear 0s forwards ;
+		    }
+		    .spac.jixie7{
+		    	animation: xian 0.2s linear 0s forwards ;
+		    }
+		    .spac.jixie8{
+		    	animation: xian 0.2s linear 0s forwards ;
+		    }
+		    .spac.jixie9{
+		    	animation: xian 0.2s linear 0s forwards ;
+		    }
+		    .spac.jixie10{
+		    	animation: xian 0.2s linear 0s forwards ;
+		    }
+		    .spac.jixie11{
+		    	animation: xian 0.2s linear 0s forwards ;
+		    }
+		    .spac.jixie12{
+		    	animation: xian 0.2s linear 0s forwards ;
+		    }
+		    .spac.jixie13{
+		    	animation: xian 0.2s linear 0s forwards ;
+		    }
+		</style>
+	</head>
+	<body>
+		<div class="swiper-container">
+		    <div class="swiper-wrapper">
+		        <div class="swiper-slide first">
+		        	<div class="first-box">
+			        	<img class="first-kuan0" src="img/play.png">
+			        	<div class="first-kuan1-box">
+				        	<img class="first-kuan1" src="img/load2.png">
+			        	</div>
+			        	<img class="first-kuan2" src="img/load2.png">
+			        	<img class="first-kuan3" src="img/load1.png">
+		        	</div>
+		        	<img class="jiantou" src="img/bt1.png">
+		        </div>
+		        <div class="swiper-slide second">
+		        	<div class="second-box zhixing">
+		        		<img class="xuan0" src="img/delta.png"/>
+		        		<img class="xuan1" src="img/indicate.png"/>
+		        		<img class="xuan2" src="img/below-circle.png">
+			        	<img class="xuan3" src="img/load1.png" />		        			
+		        		<img class="xuan4" src="img/load1.png" />
+		        		<img class="xuan5" src="img/work-circle.png"/>
+		        	</div>
+		        	<img class="jiantou" src="img/bt1.png">
+		        </div>
+		        <div class="swiper-slide third">
+		        	<div class="third-box">
+		        		<img class="jixie0 spacial" src="img/cutufo_0.png" alt="" />
+		        		<img class="jixie1" src="img/cutufo_1.png" alt="" />
+		        		<img class="jixie2" src="img/cutufo_2.png" alt="" />
+		        		<img class="jixie3" src="img/cutufo_3.png" alt="" />
+		        		<img class="jixie4" src="img/cutufo_4.png" alt="" />
+		        		<img class="jixie5" src="img/cutufo_5.png" alt="" />
+		        		<img class="jixie6" src="img/cutufo_6.png" alt="" />
+		        		<img class="jixie7" src="img/cutufo_7.png" alt="" />
+		        		<img class="jixie8" src="img/cutufo_8.png" alt="" />
+		        		<img class="jixie9" src="img/cutufo_9.png" alt="" />
+		        		<img class="jixie10" src="img/cutufo_10.png" alt="" />
+		        		<img class="jixie11" src="img/cutufo_11.png" alt="" />
+		        		<img class="jixie12" src="img/cutufo_12.png" alt="" />
+		        		<img class="jixie13" src="img/cutufo_13.png" alt="" />
+		        	</div>
+		        	<img class="jiantou" src="img/bt1.png">
+		        </div>
+		    </div>
+		    <!-- 如果需要分页器 -->
+		    <div class="swiper-pagination"></div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/swiper.min.js"></script>
+	<script>        
+		var mySwiper = new Swiper ('.swiper-container', {
+		    direction: 'vertical',
+		    loop: true,
+		    
+		    // 如果需要分页器
+		    pagination: '.swiper-pagination'
+		});
+		$('.second-box').click(function (){
+			$(this).toggleClass('zhixing');
+			$(this).addClass('tingzhi');
+			setTimeout(function (){
+				$(this).removeClass('tingzhi');
+			},2000);
+		});
+		var i = 1;
+		$('.third-box').click(function (){
+		 	var timer = setInterval(function (){
+		 		$('.jixie0').removeClass('spacial');
+		 		$('.third-box img:nth-child(' + i + ')').addClass('spac').siblings('img').removeClass('spac');
+		 		i++;
+		 		if(i > 13){
+		 			$('.third-box').find('img').removeClass('spac')
+		 			$('.jixie0').addClass('spacial');
+		 			i = 1;
+		 			clearInterval(timer);
+		 		}
+		 		console.log(i);
+		 	},200);
+		});
+  </script>
+</html>
